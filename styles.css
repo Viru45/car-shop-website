@@ -1,0 +1,284 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+/* Reset some basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* Dark background for the navbar */
+    padding: 10px 20px; /* Padding to space out the items */
+    color: white;
+}
+
+/* Logo styles */
+.navbar .logo h1 {
+    font-size: 24px; /* Logo font size */
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* Cart button styles */
+.cart button {
+    background-color: #28a745; /* Green button color */
+    color: white; /* White text */
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.cart button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center the items */
+    }
+
+    .cart button {
+        width: 100%; /* Make the button full-width on mobile */
+        padding: 12px; /* Add extra padding */
+    }
+
+    .logo h1 {
+        text-align: center; /* Center logo text on small screens */
+    }
+}
+
+header .logo h1 {
+    margin-left: 20px;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: 'Arial Black', Gadget, sans-serif;
+}
+
+header .cart button {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(255, 69, 0, 0.5);
+}
+
+header .cart button:hover {
+    background-color: #e03e00;
+    box-shadow: 0 6px 10px rgba(224, 62, 0, 0.7);
+}
+
+.container {
+    padding: 30px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-top: 20px;
+    color: #111;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Car Gallery */
+.car-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.car-card {
+    width: 240px;
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.car-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.car-card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.car-card p {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Add to Cart Button on Car Cards */
+.add-to-cart-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.5);
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 86, 179, 0.7);
+}
+
+.add-to-cart-btn.added, .add-to-cart-btn:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Car Details Section */
+.car-details {
+    display: none;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#addToCartBtn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+#addToCartBtn:hover {
+    background-color: #218838;
+}
+
+#addToCartBtn.added {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+#addToCartBtn.added:hover {
+    background-color: #6c757d;
+}
+
+/* Cart Popup */
+.cart-popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 100%;
+    background-color: #fff;
+    border-left: 2px solid #ddd;
+    padding: 25px;
+    display: none;
+    box-shadow: -2px 0 12px rgba(0, 0, 0, 0.15);
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.cart-popup h3 {
+    font-size: 2em;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #111;
+}
+
+.cart-popup button {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-top: 15px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 69, 0, 0.5);
+}
+
+.cart-popup button:hover {
+    background-color: #e03e00;
+    box-shadow: 0 6px 12px rgba(224, 62, 0, 0.7);
+}
+
+/* Footer styling */
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .car-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+    .car-card {
+        width: 90%;
+        margin-bottom: 30px;
+    }
+    .add-to-cart-btn {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-top: 10px;
+    }
+}

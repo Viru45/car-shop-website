@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Car Showroom</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Navbar Section -->
+<nav class="navbar">
+    <div class="logo">
+        <h1>CARS 24</h1>
+    </div>
+    <div class="cart">
+        <button id="cartButton" onclick="toggleCart()">Cart (0)</button>
+    </div>
+</nav>
+
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <h2>Available Cars</h2>
+        <div class="car-gallery">
+            <div class="car-card" onclick="showCarDetails('car1')">
+                <img src="car1.webp" alt="Car 1" />
+                <p>Skoda Kodiaq</p>
+                <button class="add-to-cart-btn" data-car-id="car1">Add to Cart</button>
+            </div>
+            <div class="car-card" onclick="showCarDetails('car2')">
+                <img src="car2.webp" alt="Car 2" />
+                <p>Mahindra BE 6</p>
+                <button class="add-to-cart-btn" data-car-id="car2">Add to Cart</button>
+            </div>
+            <div class="car-card" onclick="showCarDetails('car3')">
+                <img src="car3.webp" alt="Car 3" />
+                <p>Mahindra XUV700</p>
+                <button class="add-to-cart-btn" data-car-id="car3">Add to Cart</button>
+            </div>
+            <div class="car-card" onclick="showCarDetails('car4')">
+                <img src="car4.webp" alt="Car 4" />
+                <p>Maruti Suzuki Fronx</p>
+                <button class="add-to-cart-btn" data-car-id="car4">Add to Cart</button>
+            </div>
+            <div class="car-card" onclick="showCarDetails('car5')">
+                <img src="car5.webp" alt="Car 5" />
+                <p>Mahindra Thar Roxx</p>
+                <button class="add-to-cart-btn" data-car-id="car5">Add to Cart</button>
+            </div>
+            <div class="car-card" onclick="showCarDetails('car6')">
+                <img src="car6.webp" alt="Car 6" />
+                <p>Tata Tiago</p>
+                <button class="add-to-cart-btn" data-car-id="car6">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Car Details Section -->
+        <div id="car-details" class="car-details">
+            <h3>Car Details</h3>
+            <div id="car-info">
+                <p id="car-name"></p>
+                <p id="car-description"></p>
+                <p id="car-price"></p>
+                <button id="addToCartBtn" onclick="addToCart()">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Section -->
+    <div id="cartPopup" class="cart-popup">
+        <h3>Your Cart</h3>
+        <div id="cartItems"></div>
+        <button onclick="clearCart()">Clear Cart</button>
+        <button onclick="checkout()">Checkout</button>
+        <button onclick="toggleCart()">Close</button>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+          <p>&copy; 2025 CARS 24. All rights reserved.</p>
+        </div>
+      </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
